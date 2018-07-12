@@ -22,6 +22,11 @@ function forkRepo() {
     .then(json => showForkedRepo(json))
 }
 
+function showForkedRepo(repo) {
+  let repoHTML = `<a href="${repo.html_url}">${repo.name}</a>`
+  $("#results").append(repoHTML)
+}
+
 function getToken() {
   //change to your token to run in browser, but set
   //back to '' before committing so all tests pass
