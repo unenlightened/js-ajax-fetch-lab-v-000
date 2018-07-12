@@ -44,7 +44,7 @@ function createIssue() {
 }
 
 function getIssues(repo) {
-  const repoLink = '${userName}/${repoName}'
+  const repoLink = `${userName}/${repoName}`
   fetch(`https://api.github.com/repos/${repoLink}/issues`, {
     headers: {
       Authorization: `token ${getToken()}`
