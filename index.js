@@ -26,7 +26,7 @@ function createIssue() {
   let title = $("#title").val()
   let body = $("#body").val()
 
-  fetch(`https://api.github.com/issues`, {
+  fetch(`https://api.github.com/${repo}/issues`, {
     method: 'post',
     headers: {
       Authorization: `token ${getToken()}`
