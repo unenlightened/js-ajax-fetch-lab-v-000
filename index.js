@@ -37,9 +37,9 @@ function createIssue() {
   })
 }
 
-function getIssues() {
-  const repo = '${owner}/javascript-fetch-lab'
-  fetch(`https://api.github.com/repos/${repo}/issues`, {
+function getIssues(repo) {
+  const repoLink = repo.author.login + "/" + repo.name
+  fetch(`https://api.github.com/repos/${repoLink}/issues`, {
     headers: {
       Authorization: `token ${getToken()}`
     }
@@ -49,6 +49,6 @@ function getIssues() {
 }
 
 function showIssues(issues) {
-  
+
   $("#results").append(repoHTML)
 }
