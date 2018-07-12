@@ -5,6 +5,15 @@ function showIssues(json) {
 }
 
 function createIssue() {
+  const repo = 'learn-co-curriculum/javascript-fetch-lab'
+  fetch(`https://api.github.com/repos/${repo}`, {
+    // method: 'post',
+    headers: {
+      Authorization: `token ${getToken()}`
+    }
+  })
+    .then(res => res.json())
+    .then(json => showForkedRepo(json))
 }
 
 function showResults(json) {
