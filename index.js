@@ -21,23 +21,6 @@ function showForkedRepo(repo) {
   $("#results").append(repoHTML)
 }
 
-
-
-
-
-//   createIssue()
-//   const url = fetchSpy.calls[0].arguments[0]
-//   expect(url).toMatch(/javascript-fetch-lab\/issues/)
-//   expect(url).toNotMatch(/learn-co-curriculum/)
-//   const opts = fetchSpy.calls[0].arguments[1]
-//   expect(opts.method).toMatch(/post/)
-//   expect(opts.headers).toMatch(/Authorization: token\s./)
-//   expect(opts.body).toMatch(/test body/)
-// })
-
-
-// POST /repos/:owner/:repo/issues
-
 function createIssue() {
   let title = document.getElementById('title').value
   let body = document.getElementById('body').value
@@ -61,12 +44,10 @@ function getIssues() {
     }
   })
     .then(res => res.json())
-    .then(json => console.log(json))
+    .then(json => showIssues(json))
 }
 
-// it('fetches the get issues api', () => {
-//   getIssues()
-//   const url = fetchSpy.calls[0].arguments[0]
-//   expect(url).toMatch(/javascript-fetch-lab\/issues/)
-//   expect(url).toNotMatch(/learn-co-curriculum/)
-// })
+function showIssues(issues) {
+  
+}
+
