@@ -52,3 +52,7 @@ function createIssue() {
   //   .then(res => res.json())
   //   .then(json => showForkedRepo(json))
 }
+
+function getIssue() {
+  
+}
