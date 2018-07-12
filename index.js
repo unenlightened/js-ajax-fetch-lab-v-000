@@ -4,6 +4,21 @@ function getIssues() {
 function showIssues(json) {
 }
 
+it('fetches the create issue api', () => {
+  document.getElementById('title').value = "test"
+  document.getElementById('body').value = "test body"
+
+  createIssue()
+  const url = fetchSpy.calls[0].arguments[0]
+  expect(url).toMatch(/javascript-fetch-lab\/issues/)
+  expect(url).toNotMatch(/learn-co-curriculum/)
+  const opts = fetchSpy.calls[0].arguments[1]
+  expect(opts.method).toMatch(/post/)
+  expect(opts.headers).toMatch(/Authorization: token\s./)
+  expect(opts.body).toMatch(/test body/)
+})
+
+
 // POST /repos/:owner/:repo/issues
 
 function createIssue() {
@@ -11,8 +26,8 @@ function createIssue() {
   let title = $("#title").val()
   let body = $("#body").val()
 
-  fetch(`https://api.github.com/repos/${repo}`, {
-    // method: 'post',
+  fetch(`https://api.github.com/issues`, {
+    method: 'post',
     headers: {
       Authorization: `token ${getToken()}`
     }
@@ -34,7 +49,7 @@ function forkRepo() {
 }
 
 function showForkedRepo(repo) {
-  let repoHTML = `<a href="${repo.html_url}">${repo.name}</a>`
+  let repoHTML = `<a id="repo-link" href="${repo.html_url}">${repo.name}</a>`
   $("#results").append(repoHTML)
 }
 
