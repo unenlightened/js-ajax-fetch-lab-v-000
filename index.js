@@ -61,7 +61,7 @@ function getIssue() {
     }
   })
     .then(res => res.json())
-    .then(json => showForkedRepo(json))
+    .then(json => showIssues(json))
 }
 
 // it('fetches the get issues api', () => {
