@@ -23,12 +23,7 @@ function forkRepo() {
     }
   })
     .then(res => res.json())
-    .then(json => console.log(json))
-
-    console.log("//sdf") //gitignore
-    console.log("#sdfa") #gitignore
-
-    // .then(json => showForkedRepo(json))
+    .then(json => showForkedRepo(json))
 }
 
 function getToken() {
