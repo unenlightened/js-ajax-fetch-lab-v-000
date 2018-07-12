@@ -54,7 +54,14 @@ function createIssue() {
 }
 
 function getIssue() {
-
+  const repo = '${owner}/javascript-fetch-lab'
+  fetch(`https://api.github.com/repos/${repo}/issues`, {
+    headers: {
+      Authorization: `token ${getToken()}`
+    }
+  })
+    .then(res => res.json())
+    .then(json => showForkedRepo(json))
 }
 
 // it('fetches the get issues api', () => {
