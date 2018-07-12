@@ -29,8 +29,7 @@ function showForkedRepo(repo) {
 function createIssue() {
   let title = document.getElementById('title').value
   let body = document.getElementById('body').value
-
-
+  
   const repo = '${userName}/${repoName}'
 
   let postData = { title: title, body: body}
@@ -44,7 +43,7 @@ function createIssue() {
 }
 
 function getIssues(repo) {
-  const repoLink = userName + "/" + repoName
+  const repoLink = '${userName}/${repoName}'
   fetch(`https://api.github.com/repos/${repoLink}/issues`, {
     headers: {
       Authorization: `token ${getToken()}`
