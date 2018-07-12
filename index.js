@@ -31,13 +31,14 @@ function createIssue() {
   let name = document.getElementById('repo-link').dataset.name
 
   const repo = '${owner}/javascript-fetch-lab'
+
+  let postData = { title: title, body: body}
   fetch(`https://api.github.com/repos/${repo}/issues`, {
     method: 'post',
-    title: title,
-    body: body,
     headers: {
       Authorization: `token ${getToken()}`
-    }
+    },
+    body: JSON.stringify(postData)
   })
 }
 
