@@ -49,5 +49,5 @@ function getIssues() {
 
 function showIssues(issues) {
   
+  $("#results").append(repoHTML)
 }
-
