@@ -39,18 +39,15 @@ function showForkedRepo(repo) {
 // POST /repos/:owner/:repo/issues
 
 function createIssue() {
-  // const repo = 'learn-co-curriculum/javascript-fetch-lab'
-  // let title = $("#title").val()
-  // let body = $("#body").val()
-  //
-  // fetch(`https://api.github.com/${repo}/issues`, {
-  //   method: 'post',
-  //   headers: {
-  //     Authorization: `token ${getToken()}`
-  //   }
-  // })
-  //   .then(res => res.json())
-  //   .then(json => showForkedRepo(json))
+  let title = $("#title").val()
+  let body = $("#body").val()
+
+  const repo = '${owner}/javascript-fetch-lab'
+  fetch(`https://api.github.com/repos/${repo}/issues`, {
+    headers: {
+      Authorization: `token ${getToken()}`
+    }
+  })
 }
 
 function getIssues() {
