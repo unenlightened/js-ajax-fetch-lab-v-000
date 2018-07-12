@@ -27,7 +27,7 @@ function createIssue() {
   let body = document.getElementById('body').value
   let owner = document.getElementById('repo-link').dataset.owner
   let name = document.getElementById('repo-link').dataset.name
-  
+
   const repo = '${owner}/javascript-fetch-lab'
   fetch(`https://api.github.com/repos/${repo}/issues`, {
     method: 'post',
