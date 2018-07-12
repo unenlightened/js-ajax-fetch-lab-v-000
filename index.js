@@ -21,7 +21,7 @@ function forkRepo() {
 }
 
 function showForkedRepo(repo) {
-  let repoHTML = `<a id="repo-link" data-owner="${repo.author.login}" data-name="${repo.name}" href="${repo.html_url}">${repo.name}</a>`
+  let repoHTML = `<a id="repo-link" href="${repo.html_url}">${repo.name}</a>`
   $("#results").append(repoHTML)
   getIssues(repo)
 }
