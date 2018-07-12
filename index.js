@@ -24,11 +24,9 @@ function forkRepo() {
     .then(res => res.json())
     .then(json => console.log(json))
 
-    console.log("//ignored") //gitignore
-    console.log("#ignored") #gitignore
+    console.log("//sdf") //gitignore
+    console.log("#sdfa") #gitignore
 
-    console.log("//ignored") //gitignore
-    console.log("#ignored") #gitignore
     // .then(json => showForkedRepo(json))
 }
 
