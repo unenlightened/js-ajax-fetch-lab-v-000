@@ -9,7 +9,7 @@ function getToken() {
 
 function forkRepo() {
   repoName = 'javascript-fetch-lab'
-  const repo = 'learn-co-curriculum/javascript-fetch-lab'
+  const repo = 'learn-co-curriculum/${repoName}'
   fetch(`https://api.github.com/repos/${repo}`, {
     method: 'post',
     headers: {
