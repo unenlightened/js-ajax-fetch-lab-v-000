@@ -4,8 +4,13 @@ function getIssues() {
 function showIssues(json) {
 }
 
+// POST /repos/:owner/:repo/issues
+
 function createIssue() {
   const repo = 'learn-co-curriculum/javascript-fetch-lab'
+  let title = $("#title").val()
+  let body = $("#body").val()
+
   fetch(`https://api.github.com/repos/${repo}`, {
     // method: 'post',
     headers: {
@@ -14,9 +19,6 @@ function createIssue() {
   })
     .then(res => res.json())
     .then(json => showForkedRepo(json))
-}
-
-function showResults(json) {
 }
 
 function forkRepo() {
