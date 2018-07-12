@@ -53,7 +53,7 @@ function createIssue() {
   //   .then(json => showForkedRepo(json))
 }
 
-function getIssue() {
+function getIssues() {
   const repo = '${owner}/javascript-fetch-lab'
   fetch(`https://api.github.com/repos/${repo}/issues`, {
     headers: {
