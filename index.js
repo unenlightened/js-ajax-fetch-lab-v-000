@@ -31,7 +31,7 @@ function createIssue() {
   let title = document.getElementById('title').value
   let body = document.getElementById('body').value
 
-  const repo = '${userName}/${repoName}'
+  const repo = `${userName}/${repoName}`
 
   let postData = { title: title, body: body}
   fetch(`https://api.github.com/repos/${repo}/issues`, {
