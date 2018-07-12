@@ -1,4 +1,5 @@
 const userName = ''
+const repoName = ''
 
 function getToken() {
   //change to your token to run in browser, but set
@@ -43,7 +44,7 @@ function createIssue() {
 }
 
 function getIssues(repo) {
-  const repoLink = repo.author.login + "/" + repo.name
+  const repoLink = userName + "/" + repoName
   fetch(`https://api.github.com/repos/${repoLink}/issues`, {
     headers: {
       Authorization: `token ${getToken()}`
