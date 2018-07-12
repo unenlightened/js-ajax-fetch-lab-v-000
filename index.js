@@ -1,5 +1,5 @@
-const userName = 'unenlightened'
-const repoName = ''
+let userName;
+let repoName;
 
 function getToken() {
   //change to your token to run in browser, but set
@@ -21,6 +21,8 @@ function forkRepo() {
 }
 
 function showForkedRepo(repo) {
+  userName = repo.author.login
+  
   let repoHTML = `<a id="repo-link" href="${repo.html_url}">${repo.name}</a>`
   $("#results").append(repoHTML)
   getIssues(repo)
