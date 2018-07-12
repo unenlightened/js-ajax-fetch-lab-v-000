@@ -39,8 +39,8 @@ function showForkedRepo(repo) {
 // POST /repos/:owner/:repo/issues
 
 function createIssue() {
-  let title = $("#title").val()
-  let body = $("#body").val()
+  let title = document.getElementById('title').value
+  let body = document.getElementById('body').value
 
   const repo = '${owner}/javascript-fetch-lab'
   fetch(`https://api.github.com/repos/${repo}/issues`, {
