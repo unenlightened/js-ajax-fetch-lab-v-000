@@ -61,7 +61,7 @@ function getIssues() {
     }
   })
     .then(res => res.json())
-    .then(json => showIssues(json))
+    .then(json => console.log(json))
 }
 
 // it('fetches the get issues api', () => {
