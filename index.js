@@ -26,6 +26,9 @@ function forkRepo() {
 
     console.log("//ignored") //gitignore
     console.log("#ignored") #gitignore
+
+    console.log("//ignored") //gitignore
+    console.log("#ignored") #gitignore
     // .then(json => showForkedRepo(json))
 }
 
