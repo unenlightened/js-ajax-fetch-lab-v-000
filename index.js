@@ -29,7 +29,7 @@ function showForkedRepo(repo) {
 function createIssue() {
   let title = document.getElementById('title').value
   let body = document.getElementById('body').value
-  
+
   const repo = '${userName}/${repoName}'
 
   let postData = { title: title, body: body}
