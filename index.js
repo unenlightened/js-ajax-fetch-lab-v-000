@@ -19,6 +19,7 @@ function forkRepo() {
 function showForkedRepo(repo) {
   let repoHTML = `<a id="repo-link" href="${repo.html_url}">${repo.name}</a>`
   $("#results").append(repoHTML)
+  getIssues(repo)
 }
 
 function createIssue() {
