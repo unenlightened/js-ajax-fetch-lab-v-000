@@ -45,6 +45,7 @@ function createIssue() {
   const repo = '${owner}/javascript-fetch-lab'
   fetch(`https://api.github.com/repos/${repo}/issues`, {
     method: 'post',
+    body: body,
     headers: {
       Authorization: `token ${getToken()}`
     }
